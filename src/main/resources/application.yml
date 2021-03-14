@@ -1,0 +1,18 @@
+server:
+  port: ${SERVICE_PORT:8666}
+  servlet:
+    context-path: ${BASE_URL:/}
+
+spring:
+  application:
+    name: export-service
+  profiles:
+    active: dev
+
+  security:
+    basic:
+      enabled: false
+
+logging:
+  level:
+    root: ERROR
