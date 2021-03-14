@@ -8,15 +8,15 @@ import ru.nixic.repository.SchemaRepository;
 import java.util.Map;
 
 @Component
-public class ServiceFactory {
+public class ExportServiceFactory {
 
     private final Map<Level, ExportService> exportSchemaSrcServiceMap;
     private final SchemaRepository repository;
 
     @Autowired
-    public ServiceFactory(Map<Level, ExportService> exportSchemaSrcServiceMap, SchemaRepository repository) {
+    public ExportServiceFactory(Map<Level, ExportService> exportSchemaSrcServiceMap) {
         this.exportSchemaSrcServiceMap = exportSchemaSrcServiceMap;
-        this.repository = repository;
+        this.repository = new SchemaRepository();
     }
 
     public ExportService getService(Integer id) {
