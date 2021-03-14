@@ -1,18 +1,19 @@
 package ru.nixic.service;
 
 import org.springframework.stereotype.Service;
+import ru.nixic.dto.SchemaDto;
 import ru.nixic.model.Level;
 
 @Service
-public class ExportServiceTwo implements ExportService {
+public class ExportServiceLevelThee implements ExportService {
 
     @Override
     public String export() {
-        return "Export Two!!";
+        return "Export Three!!!";
     }
 
     @Override
     public Level ownLevel() {
-        return Level.LEVEL_TWO;
+        return Level.LEVEL_THREE;
     }
 }
