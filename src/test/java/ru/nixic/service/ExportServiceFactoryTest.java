@@ -11,6 +11,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import ru.nixic.config.ApplicationConfig;
+import ru.nixic.config.ApplicationTestConfig;
 import ru.nixic.dto.SchemaDto;
 import ru.nixic.repository.SchemaRepository;
 
@@ -20,8 +21,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {ExportServiceFactory.class})
 @ActiveProfiles("test")
-@ContextConfiguration(classes = {ApplicationConfig.class})
-@Import({ExportServiceLevelOne.class, ExportServiceLevelTwo.class, ExportServiceLevelThee.class})
+@ContextConfiguration(classes = {ApplicationTestConfig.class})
 class ExportServiceFactoryTest {
 
     @Autowired
