@@ -1,4 +1,5 @@
-### Hi there 👋
+### Hi there 👋 
+## It's just example of use ImportBeanDefinitionRegistrar
 ## URL example:  http://localhost:8666/export/0 
 <!--
 **Nixic/nixic** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
