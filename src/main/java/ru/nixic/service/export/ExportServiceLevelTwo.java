@@ -1,9 +1,7 @@
-package ru.nixic.service;
+package ru.nixic.service.export;
 
-import org.springframework.stereotype.Service;
 import ru.nixic.model.Level;
 
-@Service
 public class ExportServiceLevelTwo implements ExportService {
 
     @Override

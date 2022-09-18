@@ -9,10 +9,6 @@ spring:
   profiles:
     active: dev
 
-  security:
-    basic:
-      enabled: false
-
-logging:
-  level:
-    root: ERROR
+#logging:
+#  level:
+#    root: ERROR

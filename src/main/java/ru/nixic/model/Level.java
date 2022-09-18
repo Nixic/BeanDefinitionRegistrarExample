@@ -8,15 +8,7 @@ public enum Level {
     LEVEL_TWO("levelTwo"),
     LEVEL_THREE("levelThree");
 
-    private String id;
-    private String code;
-
     Level(String code) {
-        this.code = code;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public static Level getLevelByOrdinalId(Integer id) {

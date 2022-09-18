@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import ru.nixic.model.Level;
 import ru.nixic.service.MyImportBeanDefinitionRegistrar;
-import ru.nixic.service.ExportService;
+import ru.nixic.service.export.ExportService;
 
 import java.util.List;
 import java.util.Map;
@@ -17,15 +17,14 @@ import java.util.stream.Collectors;
 public class ApplicationTestConfig {
 
     /**
-     * Мапа соотношения типа уровня схемы и сервиса который будет генерировать экспортируемые данные
+     * Map with services and their levels.
      *
-     * @param services список всех сервисов для генерации
-     * @return мапу соотношений уровень схемы - сервис.
+     * @param services list of servisec
+     * @return map
      */
     @Bean
     public Map<Level, ExportService> exportSchemaSrcServiceMap(List<ExportService> services) {
-        final Map<Level, ExportService> map = services.stream()
+        return services.stream()
                 .collect(Collectors.toMap(ExportService::ownLevel, Function.identity()));
-        return map;
     }
 }

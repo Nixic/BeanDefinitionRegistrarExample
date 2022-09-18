@@ -6,17 +6,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-import ru.nixic.config.ApplicationConfig;
 import ru.nixic.config.ApplicationTestConfig;
-import ru.nixic.dto.SchemaDto;
-import ru.nixic.repository.SchemaRepository;
-
-import java.io.IOException;
-import java.util.List;
+import ru.nixic.service.export.ExportServiceFactory;
+import ru.nixic.service.export.ExportServiceLevelOne;
+import ru.nixic.service.export.ExportServiceLevelThee;
+import ru.nixic.service.export.ExportServiceLevelTwo;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {ExportServiceFactory.class})

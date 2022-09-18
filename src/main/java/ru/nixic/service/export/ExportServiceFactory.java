@@ -1,4 +1,4 @@
-package ru.nixic.service;
+package ru.nixic.service.export;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

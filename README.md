@@ -1,5 +1,6 @@
-### Hi there 👋 
-## It's just example to use ImportBeanDefinitionRegistrar
+## Hi there 👋 
+### It's just example how to use ImportBeanDefinitionRegistrar to register a non-bean classes
+### Please, start see code from  @Import(MyImportBeanDefinitionRegistrar.class) in ApplicationConfig class
 ## URL example:  http://localhost:8666/export/0 
 <!--
 **Nixic/nixic** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

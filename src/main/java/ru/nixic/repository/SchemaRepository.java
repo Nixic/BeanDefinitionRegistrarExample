@@ -2,6 +2,7 @@ package ru.nixic.repository;
 
 import org.springframework.stereotype.Repository;
 import ru.nixic.dto.SchemaDto;
+import ru.nixic.exception.BadRequestException;
 import ru.nixic.model.Level;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 @Repository
 public class SchemaRepository {
 
-    List<SchemaDto> schemaDtoList;
+    private final List<SchemaDto> schemaDtoList;
 
     public SchemaRepository() {
         schemaDtoList = new ArrayList<>();
@@ -24,7 +25,7 @@ public class SchemaRepository {
         try {
             schemaDto = schemaDtoList.get(id);
         } catch (Exception e) {
-            throw new IllegalArgumentException("Сервис по уровню экспорта " + id + " не найдет");
+            throw new BadRequestException("Schema by id " + id + " not found.");
         }
         return schemaDto;
     }
